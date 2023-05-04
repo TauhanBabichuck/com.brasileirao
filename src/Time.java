@@ -21,8 +21,17 @@ public class Time {
     private int derrotas;
     
           public void AdicionarJogador(Jogador jogador) {     
-              jogadores.add(jogador);
-          }
+          
+          
+
+        if ((jogadores.size() < 11) && (!jogadores.contains(jogador))) {
+            jogadores.add(jogador);
+
+        } else {
+            System.out.println("jogador nao pode ser add");
+
+        }
+    }
 
     public Time(String nome, String tecnico, List<Jogador> jogadores, int vitorias, int empate, int derrotas) {
         this.nome = nome;
