@@ -19,6 +19,10 @@ public class Time {
     private int vitorias;
     private int empate;
     private int derrotas;
+    
+          public void AdicionarJogador(Jogador jogador) {     
+              jogadores.add(jogador);
+          }
 
     public Time(String nome, String tecnico, List<Jogador> jogadores, int vitorias, int empate, int derrotas) {
         this.nome = nome;
