@@ -14,22 +14,32 @@ import java.util.List;
 public class Time {
     
     private String nome;
-    private String tecnico;
+    private Tecnico tecnico;
     private List<Jogador> jogadores;
     private int vitorias;
     private int empate;
     private int derrotas;
+    
+          public void AdicionarJogador(Jogador jogador) {     
+          
+          
 
-    public Time(String nome, String tecnico, List<Jogador> jogadores, int vitorias, int empate, int derrotas) {
+        if ((jogadores.size() < 11) && (!jogadores.contains(jogador))) {
+            jogadores.add(jogador);
+
+        } else {
+            System.out.println("jogador nao pode ser add");
+
+        }
+    }
+
+    public Time(String nome, Tecnico tecnico, List<Jogador> jogadores, int vitorias, int empate, int derrotas) {
         this.nome = nome;
         this.tecnico = tecnico;
         this.jogadores = jogadores;
         this.vitorias = vitorias;
         this.empate = empate;
         this.derrotas = derrotas;
-    }
-
-    public Time() {
     }
 
     public String getNome() {
@@ -40,11 +50,11 @@ public class Time {
         this.nome = nome;
     }
 
-    public String getTecnico() {
+    public Tecnico getTecnico() {
         return tecnico;
     }
 
-    public void setTecnico(String tecnico) {
+    public void setTecnico(Tecnico tecnico) {
         this.tecnico = tecnico;
     }
 
@@ -84,5 +94,5 @@ public class Time {
     public String toString() {
         return "Time{" + "nome=" + nome + ", tecnico=" + tecnico + ", jogadores=" + jogadores + ", vitorias=" + vitorias + ", empate=" + empate + ", derrotas=" + derrotas + '}';
     }
-    
+
 }
