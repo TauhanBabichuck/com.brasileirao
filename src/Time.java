@@ -42,9 +42,6 @@ public class Time {
         this.derrotas = derrotas;
     }
 
-    public Time() {
-    }
-
     public String getNome() {
         return nome;
     }
@@ -97,5 +94,5 @@ public class Time {
     public String toString() {
         return "Time{" + "nome=" + nome + ", tecnico=" + tecnico + ", jogadores=" + jogadores + ", vitorias=" + vitorias + ", empate=" + empate + ", derrotas=" + derrotas + '}';
     }
-    
+
 }
