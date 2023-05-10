@@ -9,12 +9,17 @@
  * @author geang
  */
 public class Partida {
-  private Time timeDaCasa;
-  private Time timeDeVisitante;
-  private Time golsDaCasa;
-  private Time golsDeVisitantes;
 
-    public Partida(Time timeDaCasa, Time timeDeVisitante, Time golsDaCasa, Time golsDeVisitantes) {
+    private Time timeDaCasa;
+    private Time timeDeVisitante;
+    private int golsDaCasa;
+    private int golsDeVisitantes;
+
+    public Partida() {
+        
+    }
+    
+    public Partida(Time timeDaCasa, Time timeDeVisitante, int golsDaCasa, int golsDeVisitantes) {
         this.timeDaCasa = timeDaCasa;
         this.timeDeVisitante = timeDeVisitante;
         this.golsDaCasa = golsDaCasa;
@@ -37,29 +42,25 @@ public class Partida {
         this.timeDeVisitante = timeDeVisitante;
     }
 
-    public Time getGolsDaCasa() {
+    public int getGolsDaCasa() {
         return golsDaCasa;
     }
 
-    public void setGolsDaCasa(Time golsDaCasa) {
+    public void setGolsDaCasa(int golsDaCasa) {
         this.golsDaCasa = golsDaCasa;
     }
 
-    public Time getGolsDeVisitantes() {
+    public int getGolsDeVisitantes() {
         return golsDeVisitantes;
     }
 
-    public void setGolsDeVisitantes(Time golsDeVisitantes) {
+    public void setGolsDeVisitantes(int golsDeVisitantes) {
         this.golsDeVisitantes = golsDeVisitantes;
-    }
-
-    public Partida() {
     }
 
     @Override
     public String toString() {
         return "Partida{" + "timeDaCasa=" + timeDaCasa + ", timeDeVisitante=" + timeDeVisitante + ", golsDaCasa=" + golsDaCasa + ", golsDeVisitantes=" + golsDeVisitantes + '}';
     }
-  
-  
+
 }

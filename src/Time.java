@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -21,8 +22,6 @@ public class Time {
     private int derrotas;
     
           public void AdicionarJogador(Jogador jogador) {     
-          
-          
 
         if ((jogadores.size() < 11) && (!jogadores.contains(jogador))) {
             jogadores.add(jogador);
@@ -33,13 +32,19 @@ public class Time {
         }
     }
 
-    public Time(String nome, Tecnico tecnico, List<Jogador> jogadores, int vitorias, int empate, int derrotas) {
+    public Time() {
+        this.jogadores = new ArrayList();
+    }
+          
+
+    public Time(String nome, Tecnico tecnico, int vitorias, int empate, int derrotas) {
         this.nome = nome;
         this.tecnico = tecnico;
-        this.jogadores = jogadores;
+        
         this.vitorias = vitorias;
         this.empate = empate;
         this.derrotas = derrotas;
+        this.jogadores = new ArrayList();
     }
 
     public String getNome() {
